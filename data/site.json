@@ -1,0 +1,162 @@
+{
+  "hero": {
+    "eyebrow": "Offline tools to refine media",
+    "title": "The modern offline toolkit for Windows creators.",
+    "description": "Resize images, compress videos, extract frames, scan documents, build palettes, and more. Everything runs locally on your PC."
+  },
+  "release": {
+    "title": "RFINE v1.0.0",
+    "version": "v1.0.0",
+    "dateLabel": "Initial website-ready release. Replace this with your real latest version.",
+    "summary": "Set this to your latest release highlight.",
+    "platform": "Windows 10+",
+    "downloadUrl": "https://github.com/7blackstar/RFINE/releases/latest",
+    "downloadDescription": "Start with the latest Windows build from GitHub Releases. Later we can swap this to a direct asset download URL.",
+    "downloadCaption": "Edit version, link, and notes in data/site.json."
+  },
+  "showcase": [
+    {
+      "name": "RFINE Dashboard",
+      "summary": "A calm launchpad for your offline workflow.",
+      "image": "./assets/screenshots/dashboard.svg"
+    },
+    {
+      "name": "Image Resizer",
+      "summary": "Resize and convert images in a clean batch workflow.",
+      "image": "./assets/screenshots/image-resizer.svg"
+    },
+    {
+      "name": "Video Compressor",
+      "summary": "Reduce video size without making the interface feel heavy.",
+      "image": "./assets/screenshots/video-compressor.svg"
+    },
+    {
+      "name": "Frame Extractor",
+      "summary": "Pull still frames from video with fast offline processing.",
+      "image": "./assets/screenshots/frame-extractor.svg"
+    },
+    {
+      "name": "Color Studio",
+      "summary": "Explore palettes, gradients, and hex values in one place.",
+      "image": "./assets/screenshots/color-studio.svg"
+    },
+    {
+      "name": "Scan Studio",
+      "summary": "Scan, crop, correct perspective, and clean documents offline.",
+      "image": "./assets/screenshots/scan-studio.svg"
+    }
+  ],
+  "tools": [
+    {
+      "category": "Image",
+      "name": "Image Resizer",
+      "description": "Resize, convert, and optimize large image batches with the same calm workflow every time.",
+      "tag": "Resize • Convert • Optimize",
+      "size": "large"
+    },
+    {
+      "category": "Video",
+      "name": "Video Compressor",
+      "description": "Shrink file sizes while keeping the process simple and easy to trust.",
+      "tag": "Compress • Export • Preview",
+      "size": "medium"
+    },
+    {
+      "category": "Video",
+      "name": "Frame Extractor",
+      "description": "Capture the exact still you need from any supported video.",
+      "tag": "Frames • Precision • Speed",
+      "size": "medium"
+    },
+    {
+      "category": "Image",
+      "name": "Watermarker",
+      "description": "Apply clean marks and protect your work without clutter.",
+      "tag": "Overlay • Position • Export",
+      "size": "small"
+    },
+    {
+      "category": "Audio",
+      "name": "Audio Studio",
+      "description": "Pull audio and convert it into the format your workflow needs.",
+      "tag": "Extract • Convert • Organize",
+      "size": "small"
+    },
+    {
+      "category": "Image",
+      "name": "Color Studio",
+      "description": "Pick colors from images, inspect values, and build gradients you can copy instantly.",
+      "tag": "Hex • Palette • Gradient",
+      "size": "large"
+    },
+    {
+      "category": "Document",
+      "name": "Scan Studio",
+      "description": "Detect corners, fix perspective, and export clear multi-page scans offline.",
+      "tag": "Crop • Enhance • Multi-page",
+      "size": "medium"
+    },
+    {
+      "category": "Text",
+      "name": "Text Case",
+      "description": "Switch between naming styles and clean text in seconds.",
+      "tag": "Case • Cleanup • Utility",
+      "size": "medium"
+    },
+    {
+      "category": "Vector",
+      "name": "Vectorizer",
+      "description": "Convert simple raster artwork into scalable vectors right on your machine.",
+      "tag": "PNG to SVG • Offline • Fast",
+      "size": "large"
+    }
+  ],
+  "features": [
+    {
+      "title": "Everything stays local",
+      "description": "RFINE is designed around offline work. Your files stay on your PC, with no uploads and no waiting for cloud processing."
+    },
+    {
+      "title": "Built for repeat work",
+      "description": "The interface stays consistent across tools so repeated tasks feel faster, calmer, and easier to trust."
+    },
+    {
+      "title": "A growing suite",
+      "description": "The product can grow with tools like Color Studio, Scan Studio, Text Case, and Vectorizer without losing its identity."
+    }
+  ],
+  "changelog": [
+    {
+      "version": "v1.0.0",
+      "date": "July 21, 2026",
+      "items": [
+        "Laid the first public website foundation for RFINE.",
+        "Added editable hero, tool, release, and FAQ content through one JSON file.",
+        "Added an auto-rotating hero showcase for screenshots."
+      ]
+    },
+    {
+      "version": "Next up",
+      "date": "Planned",
+      "items": [
+        "Replace placeholder screenshots with real app captures.",
+        "Connect release details directly to GitHub API.",
+        "Add dedicated tool pages if needed."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is RFINE free?",
+      "answer": "Yes. This website is set up for a free software workflow, and the download area can point directly to your GitHub Releases page."
+    },
+    {
+      "question": "Does RFINE work offline?",
+      "answer": "That is the core promise of the product. Keep this answer if every tool runs locally without uploading files."
+    },
+    {
+      "question": "How do I update the site later?",
+      "answer": "Edit the text, links, and tool list in data/site.json. Replace the screenshots inside assets/screenshots when you have final images."
+    }
+  ]
+}
