@@ -3,192 +3,207 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RFINE | The Modern Offline Toolkit for Windows Creators</title>
+  <title>RFINE | The modern offline toolkit for media creators</title>
   <meta
     name="description"
-    content="RFINE is a modern offline toolkit for Windows creators. Resize images, compress videos, extract frames, scan documents, build palettes, and more."
+    content="RFINE is a modern offline toolkit for Windows creators. Resize images, compress videos, scan documents, extract colors, vectorize graphics, and more."
   >
-  <meta name="theme-color" content="#0b0f0c">
-  <link rel="preload" href="./data/site.json" as="fetch" crossorigin="anonymous">
+  <meta name="theme-color" content="#f4f6f3">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <div class="site-shell">
-    <header class="topbar">
-      <div class="container topbar-inner">
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container header-inner">
         <a class="brand" href="#hero" aria-label="RFINE home">
-          <span class="brand-mark">R</span>
-          <span class="brand-name">RFINE</span>
+          <img src="./assets/brand/rfine-green-light.png" alt="RFINE logo">
         </a>
 
-        <nav class="nav" aria-label="Primary">
+        <nav class="main-nav" aria-label="Primary">
           <a href="#tools">Tools</a>
           <a href="#features">Features</a>
           <a href="#release">Changelog</a>
-          <a href="#faq">FAQ</a>
-          <a href="#download">Download</a>
+          <a href="https://github.com/7blackstar/RFINE" target="_blank" rel="noreferrer">GitHub</a>
         </nav>
 
-        <a class="button button-secondary topbar-cta" href="#download">Download</a>
+        <a class="button button-primary button-header" id="header-download" href="https://github.com/7blackstar/RFINE/releases/latest">
+          <span class="button-icon">▣</span>
+          <span>Download for Windows</span>
+        </a>
       </div>
     </header>
 
     <main>
-      <section class="hero" id="hero">
-        <div class="hero-glow hero-glow-one"></div>
-        <div class="hero-glow hero-glow-two"></div>
+      <section class="hero-section" id="hero">
+        <div class="hero-ambient hero-ambient-left"></div>
+        <div class="hero-ambient hero-ambient-right"></div>
+
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow" id="hero-eyebrow">Offline media toolkit</p>
-            <h1 id="hero-title">The modern offline toolkit for Windows creators.</h1>
-            <p class="hero-description" id="hero-description">
-              Resize images, compress videos, extract frames, scan documents, build palettes,
-              and more. Everything runs locally on your PC.
+            <p class="hero-badge">100% offline • privacy first</p>
+            <h1>
+              The modern
+              <span>offline</span>
+              toolkit
+              <br>
+              for media creators.
+            </h1>
+            <p class="hero-description">
+              Resize images, compress videos, scan documents, extract colors, vectorize
+              graphics and more — all processed locally on your Windows PC.
             </p>
 
             <div class="hero-actions">
-              <a class="button button-primary" id="hero-download" href="#download">Download for Windows</a>
-              <a class="button button-secondary" href="#tools">Explore tools</a>
+              <a class="button button-primary button-large" id="hero-download" href="https://github.com/7blackstar/RFINE/releases/latest">
+                <span class="button-icon">▣</span>
+                <span>
+                  Download for Free
+                  <small>Windows 10/11 (64-bit)</small>
+                </span>
+              </a>
+
+              <a class="button button-secondary button-large" href="https://github.com/7blackstar/RFINE" target="_blank" rel="noreferrer">
+                <span class="button-icon button-icon-outline">☆</span>
+                <span>View on GitHub</span>
+              </a>
             </div>
 
-            <div class="hero-meta">
-              <div class="meta-pill">
-                <span class="meta-label">Latest</span>
-                <span class="meta-value" id="meta-version">Loading...</span>
-              </div>
-              <div class="meta-pill">
-                <span class="meta-label">Platform</span>
-                <span class="meta-value" id="meta-platform">Windows 10+</span>
-              </div>
-              <div class="meta-pill">
-                <span class="meta-label">Privacy</span>
-                <span class="meta-value">100% offline</span>
-              </div>
+            <div class="hero-points">
+              <p>No uploads</p>
+              <p>No tracking</p>
+              <p>Blazing fast</p>
             </div>
           </div>
 
-          <div class="hero-visual">
-            <div class="showcase-card" id="showcase-card">
-              <div class="window-topbar">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-
-              <div class="showcase-stage" id="showcase-stage">
-                <img class="showcase-image active" id="showcase-image-a" alt="">
-                <img class="showcase-image" id="showcase-image-b" alt="">
-              </div>
-
-              <div class="showcase-footer">
-                <div>
-                  <p class="showcase-tool" id="showcase-tool">Dashboard</p>
-                  <p class="showcase-summary" id="showcase-summary">A calm launchpad for your offline workflow.</p>
+          <div class="hero-preview">
+            <div class="app-window">
+              <div class="window-bar">
+                <span>RFINE Media Processing Suite</span>
+                <div class="window-controls">
+                  <i></i>
+                  <i></i>
+                  <i></i>
                 </div>
-                <div class="showcase-progress" aria-hidden="true">
-                  <span class="showcase-progress-bar" id="showcase-progress-bar"></span>
-                </div>
+              </div>
+              <div class="window-body">
+                <img src="./assets/screenshots/dashboard.svg" alt="RFINE dashboard preview">
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section tool-section" id="tools">
+      <section class="tools-section section" id="tools">
         <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">The suite</p>
-            <h2>All the tools you need, in one refined workflow.</h2>
-            <p>Every tool keeps the same calm interface and the same offline-first promise.</p>
+          <div class="section-title center">
+            <h2>All the tools you need</h2>
+            <p>Everything in one place. Works offline. Always.</p>
+          </div>
+
+          <div class="tool-filters">
+            <button class="filter-chip active" type="button">All Tools</button>
+            <button class="filter-chip" type="button">Image</button>
+            <button class="filter-chip" type="button">Video</button>
+            <button class="filter-chip" type="button">Document</button>
+            <button class="filter-chip" type="button">Text</button>
+            <button class="filter-chip" type="button">Audio</button>
+            <button class="filter-chip" type="button">Utilities</button>
           </div>
 
           <div class="tool-grid" id="tool-grid"></div>
-        </div>
-      </section>
 
-      <section class="section feature-section" id="features">
-        <div class="container">
-          <div class="section-heading narrow">
-            <p class="eyebrow">Why RFINE</p>
-            <h2>Built for speed, privacy, and everyday creative work.</h2>
+          <div class="section-cta">
+            <a class="button button-secondary section-button" href="#tools">Explore All Tools <span>→</span></a>
           </div>
-
-          <div class="feature-list" id="feature-list"></div>
         </div>
       </section>
 
-      <section class="section release-section" id="release">
+      <section class="why-section section" id="features">
         <div class="container">
-          <div class="release-panel">
-            <div class="release-copy">
-              <p class="eyebrow">Latest release</p>
-              <h2 id="release-title">RFINE v1.0.0</h2>
-              <p id="release-date">Release information updates here.</p>
+          <div class="why-panel">
+            <div class="section-title center compact">
+              <h2>Why RFINE?</h2>
+              <p>Built for speed, privacy and productivity.</p>
             </div>
 
-            <div class="release-card">
-              <div class="release-row">
-                <span>Version</span>
-                <strong id="release-version">Loading...</strong>
+            <div class="why-grid" id="why-grid"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="showcase-section section">
+        <div class="container showcase-grid">
+          <article class="showcase-panel">
+            <div class="showcase-heading">
+              <h3>Clean. Simple. Powerful.</h3>
+              <p>A modern interface that gets out of your way so you can focus on your work.</p>
+            </div>
+
+            <div class="shot-strip" id="shot-strip"></div>
+          </article>
+
+          <article class="release-panel" id="release">
+            <div class="release-header">
+              <div>
+                <p class="release-label">Latest Release</p>
+                <span class="release-badge">Stable</span>
               </div>
-              <div class="release-row">
-                <span>Channel</span>
-                <strong>Stable</strong>
-              </div>
-              <div class="release-row">
-                <span>Notes</span>
-                <strong id="release-summary">Ready for GitHub sync</strong>
-              </div>
-            </div>
-          </div>
-
-          <div class="changelog-list" id="changelog-list"></div>
-        </div>
-      </section>
-
-      <section class="section download-section" id="download">
-        <div class="container">
-          <div class="download-panel">
-            <div>
-              <p class="eyebrow">Download</p>
-              <h2>Ready to try RFINE?</h2>
-              <p id="download-description">
-                Start with the latest Windows build. Replace the link later with your GitHub release URL.
-              </p>
             </div>
 
-            <div class="download-actions">
-              <a class="button button-primary" id="download-button" href="#">Download latest</a>
-              <p class="download-caption" id="download-caption">Update this anytime in <code>data/site.json</code>.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+            <h3 id="release-version">v1.2.4</h3>
+            <p class="release-meta" id="release-date">Released 3 days ago</p>
+            <a class="release-link" id="release-link" href="https://github.com/7blackstar/RFINE/releases/latest">View Changelog →</a>
 
-      <section class="section faq-section" id="faq">
-        <div class="container">
-          <div class="section-heading narrow">
-            <p class="eyebrow">FAQ</p>
-            <h2>Simple answers before someone clicks download.</h2>
-          </div>
+            <ul class="release-list" id="release-list"></ul>
 
-          <div class="faq-list" id="faq-list"></div>
+            <a class="button button-primary button-full" id="download-button" href="https://github.com/7blackstar/RFINE/releases/latest">
+              <span class="button-icon">▣</span>
+              <span>Download Latest Version</span>
+            </a>
+
+            <img class="release-watermark" src="./assets/brand/rfine-green-icon.png" alt="">
+          </article>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container footer-inner">
-        <div>
-          <p class="footer-brand">RFINE</p>
-          <p class="footer-copy">Offline tools to refine everyday creative work on Windows.</p>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-branding">
+          <img src="./assets/brand/rfine-green-light.png" alt="RFINE logo">
+          <p>The modern offline toolkit for media creators on Windows.</p>
         </div>
 
-        <div class="footer-links">
-          <a href="#tools">Tools</a>
+        <div class="footer-column">
+          <h4>Product</h4>
+          <a href="#tools">All Tools</a>
+          <a href="#features">Features</a>
           <a href="#release">Changelog</a>
-          <a href="#download">Download</a>
         </div>
+
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <a href="#">Documentation</a>
+          <a href="#">FAQ</a>
+          <a href="#">Report Bug</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Community</h4>
+          <a href="https://github.com/7blackstar/RFINE" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="#">Discussions</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>Made with ❤️ in India</p>
+        <p>© 2026 RFINE. All rights reserved.</p>
       </div>
     </footer>
   </div>

@@ -1,201 +1,100 @@
-const imageA = document.getElementById("showcase-image-a");
-const imageB = document.getElementById("showcase-image-b");
-const showcaseTool = document.getElementById("showcase-tool");
-const showcaseSummary = document.getElementById("showcase-summary");
-const showcaseCard = document.getElementById("showcase-card");
-const showcaseProgressBar = document.getElementById("showcase-progress-bar");
+const toolData = [
+  { icon: "▣", name: "Image Resizer", description: "Resize images in bulk with ease.", accent: "green" },
+  { icon: "◔", name: "Watermarker", description: "Add text or image watermarks.", accent: "amber" },
+  { icon: "◉", name: "Color Studio", description: "Pick colors, create palettes and gradients.", accent: "rainbow" },
+  { icon: "⟲", name: "Vectorizer", description: "Convert raster images to SVG vectors.", accent: "green" },
+  { icon: "▸", name: "Video Compressor", description: "Compress videos without losing quality.", accent: "red" },
+  { icon: "▤", name: "Frame Extractor", description: "Extract high quality frames from videos.", accent: "blue" },
+  { icon: "⌘", name: "GIF Creator", description: "Create GIFs from videos or images.", accent: "purple" },
+  { icon: "⌗", name: "Scan Studio", description: "Scan documents with smart auto-crop.", accent: "green" },
+  { icon: "T", name: "Text Case", description: "Convert text to uppercase, lowercase and more.", accent: "lime" },
+  { icon: "♫", name: "Audio Converter", description: "Convert audio between multiple formats.", accent: "red" },
+  { icon: "◫", name: "Metadata Cleaner", description: "Remove metadata from images and videos.", accent: "blue" },
+  { icon: "Q", name: "Batch Renamer", description: "Rename multiple files with advanced rules.", accent: "lime" }
+];
 
-let showcaseIndex = 0;
-let showcaseTimer = null;
-let showcaseProgressTimer = null;
-let activeImage = imageA;
-let inactiveImage = imageB;
-let showcaseItems = [];
-const ROTATION_MS = 5000;
+const whyData = [
+  { icon: "⊘", title: "100% Offline", description: "All processing happens on your PC." },
+  { icon: "⬒", title: "Privacy First", description: "Your files never leave your device." },
+  { icon: "⚡", title: "Blazing Fast", description: "Optimized for performance." },
+  { icon: "▦", title: "All-in-One", description: "A complete toolkit for every creator." },
+  { icon: "▣", title: "Windows Native", description: "Designed for Windows 10 and 11." },
+  { icon: "⌘", title: "Free Forever", description: "Powerful features, completely free." }
+];
 
-async function loadSiteData() {
-  const response = await fetch("./data/site.json");
+const shotData = [
+  { image: "./assets/screenshots/dashboard.svg", label: "Dashboard" },
+  { image: "./assets/screenshots/image-resizer.svg", label: "Image Resizer" },
+  { image: "./assets/screenshots/scan-studio.svg", label: "Scan Studio" },
+  { image: "./assets/screenshots/color-studio.svg", label: "Color Studio" }
+];
 
-  if (!response.ok) {
-    throw new Error("Could not load site data.");
-  }
+const releaseData = {
+  version: "v1.2.4",
+  date: "Released 3 days ago",
+  url: "https://github.com/7blackstar/RFINE/releases/latest",
+  bullets: [
+    "Windows 10/11 (64-bit)",
+    "Size: 38.7 MB",
+    "No installation required"
+  ]
+};
 
-  return response.json();
+function renderTools() {
+  const grid = document.getElementById("tool-grid");
+
+  grid.innerHTML = toolData.map((tool) => `
+    <article class="tool-card" data-accent="${tool.accent}">
+      <div class="tool-card-top">
+        <span class="tool-icon" aria-hidden="true">${tool.icon}</span>
+        <div>
+          <h3>${tool.name}</h3>
+          <p>${tool.description}</p>
+        </div>
+      </div>
+    </article>
+  `).join("");
 }
 
-function setText(id, value) {
-  const element = document.getElementById(id);
-  if (element) {
-    element.textContent = value;
-  }
+function renderWhy() {
+  const grid = document.getElementById("why-grid");
+
+  grid.innerHTML = whyData.map((item) => `
+    <article class="why-item">
+      <div class="why-icon" aria-hidden="true">${item.icon}</div>
+      <h3>${item.title}</h3>
+      <p>${item.description}</p>
+    </article>
+  `).join("");
 }
 
-function setLink(id, href) {
-  const element = document.getElementById(id);
-  if (element && href) {
-    element.href = href;
-  }
+function renderShots() {
+  const strip = document.getElementById("shot-strip");
+
+  strip.innerHTML = shotData.map((shot) => `
+    <article class="shot-card">
+      <div class="shot-frame">
+        <img src="${shot.image}" alt="${shot.label} preview">
+      </div>
+      <p>${shot.label}</p>
+    </article>
+  `).join("");
 }
 
-function renderHero(data) {
-  setText("hero-eyebrow", data.hero.eyebrow);
-  setText("hero-title", data.hero.title);
-  setText("hero-description", data.hero.description);
-  setText("meta-version", data.release.version);
-  setText("meta-platform", data.release.platform);
-  setLink("hero-download", data.release.downloadUrl);
+function renderRelease() {
+  document.getElementById("release-version").textContent = releaseData.version;
+  document.getElementById("release-date").textContent = releaseData.date;
+  document.getElementById("release-link").href = releaseData.url;
+  document.getElementById("download-button").href = releaseData.url;
+  document.getElementById("hero-download").href = releaseData.url;
+  document.getElementById("header-download").href = releaseData.url;
+
+  document.getElementById("release-list").innerHTML = releaseData.bullets
+    .map((item) => `<li>${item}</li>`)
+    .join("");
 }
 
-function renderTools(tools) {
-  const toolGrid = document.getElementById("tool-grid");
-  toolGrid.innerHTML = "";
-
-  tools.forEach((tool) => {
-    const card = document.createElement("article");
-    card.className = `tool-card ${tool.size}`;
-    card.innerHTML = `
-      <span class="tool-card-category">${tool.category}</span>
-      <h3>${tool.name}</h3>
-      <p>${tool.description}</p>
-      <span class="tool-card-tag">${tool.tag}</span>
-    `;
-    toolGrid.appendChild(card);
-  });
-}
-
-function renderFeatures(features) {
-  const featureList = document.getElementById("feature-list");
-  featureList.innerHTML = "";
-
-  features.forEach((feature) => {
-    const card = document.createElement("article");
-    card.className = "feature-card";
-    card.innerHTML = `
-      <h3>${feature.title}</h3>
-      <p>${feature.description}</p>
-    `;
-    featureList.appendChild(card);
-  });
-}
-
-function renderRelease(release) {
-  setText("release-title", release.title);
-  setText("release-date", release.dateLabel);
-  setText("release-version", release.version);
-  setText("release-summary", release.summary);
-  setText("download-description", release.downloadDescription);
-  setText("download-caption", release.downloadCaption);
-  setLink("download-button", release.downloadUrl);
-}
-
-function renderChangelog(entries) {
-  const changelogList = document.getElementById("changelog-list");
-  changelogList.innerHTML = "";
-
-  entries.forEach((entry) => {
-    const card = document.createElement("article");
-    card.className = "changelog-card";
-    card.innerHTML = `
-      <h3>${entry.version}</h3>
-      <p class="changelog-date">${entry.date}</p>
-      <ul>${entry.items.map((item) => `<li>${item}</li>`).join("")}</ul>
-    `;
-    changelogList.appendChild(card);
-  });
-}
-
-function renderFaq(items) {
-  const faqList = document.getElementById("faq-list");
-  faqList.innerHTML = "";
-
-  items.forEach((item) => {
-    const article = document.createElement("article");
-    article.className = "faq-item";
-    article.innerHTML = `
-      <h3>${item.question}</h3>
-      <p>${item.answer}</p>
-    `;
-    faqList.appendChild(article);
-  });
-}
-
-function applyShowcaseItem(item) {
-  inactiveImage.src = item.image;
-  inactiveImage.alt = `${item.name} screenshot`;
-
-  requestAnimationFrame(() => {
-    inactiveImage.classList.add("active");
-    activeImage.classList.remove("active");
-    [activeImage, inactiveImage] = [inactiveImage, activeImage];
-  });
-
-  showcaseTool.textContent = item.name;
-  showcaseSummary.textContent = item.summary;
-}
-
-function startProgressBar() {
-  clearInterval(showcaseProgressTimer);
-  let elapsed = 0;
-  showcaseProgressBar.style.width = "0%";
-
-  showcaseProgressTimer = setInterval(() => {
-    elapsed += 100;
-    const percentage = Math.min((elapsed / ROTATION_MS) * 100, 100);
-    showcaseProgressBar.style.width = `${percentage}%`;
-  }, 100);
-}
-
-function rotateShowcase() {
-  showcaseIndex = (showcaseIndex + 1) % showcaseItems.length;
-  applyShowcaseItem(showcaseItems[showcaseIndex]);
-  startProgressBar();
-}
-
-function startShowcase() {
-  if (showcaseItems.length === 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    return;
-  }
-
-  clearInterval(showcaseTimer);
-  startProgressBar();
-  showcaseTimer = setInterval(rotateShowcase, ROTATION_MS);
-}
-
-function pauseShowcase() {
-  clearInterval(showcaseTimer);
-  clearInterval(showcaseProgressTimer);
-}
-
-function renderShowcase(items) {
-  showcaseItems = items;
-
-  if (items.length === 0) {
-    return;
-  }
-
-  imageA.src = items[0].image;
-  imageA.alt = `${items[0].name} screenshot`;
-  imageA.classList.add("active");
-  showcaseTool.textContent = items[0].name;
-  showcaseSummary.textContent = items[0].summary;
-
-  showcaseCard.addEventListener("mouseenter", pauseShowcase);
-  showcaseCard.addEventListener("mouseleave", startShowcase);
-
-  startShowcase();
-}
-
-loadSiteData()
-  .then((data) => {
-    renderHero(data);
-    renderTools(data.tools);
-    renderFeatures(data.features);
-    renderRelease(data.release);
-    renderChangelog(data.changelog);
-    renderFaq(data.faq);
-    renderShowcase(data.showcase);
-  })
-  .catch((error) => {
-    console.error(error);
-    setText("meta-version", "Update data/site.json");
-  });
+renderTools();
+renderWhy();
+renderShots();
+renderRelease();
