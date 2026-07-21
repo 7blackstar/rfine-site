@@ -25,6 +25,8 @@ const whyData = [
 const shotData = [
   { image: "./assets/screenshots/dashboard.svg", label: "Dashboard" },
   { image: "./assets/screenshots/image-resizer.svg", label: "Image Resizer" },
+  { image: "./assets/screenshots/video-compressor.svg", label: "Video Compressor" },
+  { image: "./assets/screenshots/frame-extractor.svg", label: "Frame Extractor" },
   { image: "./assets/screenshots/scan-studio.svg", label: "Scan Studio" },
   { image: "./assets/screenshots/color-studio.svg", label: "Color Studio" }
 ];
@@ -32,13 +34,44 @@ const shotData = [
 const releaseData = {
   version: "v1.2.4",
   date: "Released 3 days ago",
-  url: "https://github.com/7blackstar/RFINE/releases/latest",
+  url: "https://github.com/7blackstar/RFINE/releases/latest/download/RFINE_Setup.exe",
   bullets: [
     "Windows 10/11 (64-bit)",
     "Size: 38.7 MB",
     "No installation required"
   ]
 };
+
+const changelogData = [
+  {
+    version: "Version 1.2.0",
+    sections: [
+      {
+        title: "New Pages Added:",
+        items: [
+          "Website foundation improved with a more polished RFINE landing page and cleaner section structure."
+        ]
+      },
+      {
+        title: "Improvements:",
+        items: [
+          "Homepage updated with cleaner cards, stronger brand alignment, and a lighter approved visual direction."
+        ]
+      }
+    ]
+  },
+  {
+    version: "Version 1.1.1",
+    sections: [
+      {
+        title: "Improvements:",
+        items: [
+          "Refined the website structure, download flow, and branding assets for public release."
+        ]
+      }
+    ]
+  }
+];
 
 function renderTools() {
   const grid = document.getElementById("tool-grid");
@@ -84,7 +117,7 @@ function renderShots() {
 function renderRelease() {
   document.getElementById("release-version").textContent = releaseData.version;
   document.getElementById("release-date").textContent = releaseData.date;
-  document.getElementById("release-link").href = releaseData.url;
+  document.getElementById("release-link").href = "./changelog.html";
   document.getElementById("download-button").href = releaseData.url;
   document.getElementById("hero-download").href = releaseData.url;
   document.getElementById("header-download").href = releaseData.url;
@@ -94,7 +127,51 @@ function renderRelease() {
     .join("");
 }
 
+function startHeroShowcase() {
+  const heroImage = document.getElementById("hero-showcase-image");
+
+  if (!heroImage) {
+    return;
+  }
+
+  let index = 0;
+
+  setInterval(() => {
+    index = (index + 1) % shotData.length;
+    heroImage.src = shotData[index].image;
+    heroImage.alt = `${shotData[index].label} preview`;
+  }, 3000);
+}
+
+function renderChangelogPage() {
+  const changelogStack = document.getElementById("changelog-stack");
+
+  if (!changelogStack) {
+    return;
+  }
+
+  changelogStack.innerHTML = changelogData.map((entry) => `
+    <article class="changelog-entry">
+      <div class="changelog-entry-title">
+        <h2>${entry.version}</h2>
+      </div>
+      <div class="changelog-entry-body">
+        ${entry.sections.map((section) => `
+          <section>
+            <h3>${section.title}</h3>
+            <ul>
+              ${section.items.map((item) => `<li>${item}</li>`).join("")}
+            </ul>
+          </section>
+        `).join("")}
+      </div>
+    </article>
+  `).join("");
+}
+
 renderTools();
 renderWhy();
 renderShots();
 renderRelease();
+startHeroShowcase();
+renderChangelogPage();
