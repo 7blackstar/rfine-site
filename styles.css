@@ -228,7 +228,7 @@ select {
   border: 1px solid rgba(77, 155, 34, 0.25);
   background: rgba(255, 255, 255, 0.56);
   color: var(--primary-1);
-  font-size: 0.9rem;
+  font-size: 0.6rem;
   text-transform: uppercase;
 }
 
@@ -247,7 +247,7 @@ select {
   max-width: 620px;
   margin: 26px 0 0;
   color: var(--text-soft);
-  font-size: 1.36rem;
+  font-size: 1.15rem;
   line-height: 1.7;
 }
 
@@ -277,7 +277,7 @@ select {
   content: "";
   position: absolute;
   left: 0;
-  top: 7px;
+  top: 0px;
   width: 16px;
   height: 16px;
   border-radius: 999px;
