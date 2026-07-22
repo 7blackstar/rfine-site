@@ -7,10 +7,9 @@ const toolData = [
   { icon: "♫", name: "Audio Converter", description: "Convert audio between popular formats offline.", accent: "green" },
   { icon: "⌘", name: "GIF Creator", description: "Generate optimized animated GIFs from videos.", accent: "green" },
   { icon: "T", name: "Case Converter", description: "Convert text between uppercase, lowercase and more.", accent: "green" },
-  { icon: "◉", name: "Color Studio", description: "Pick colors, create palettes and gradients.", accent: "rainbow" },
+  { icon: "◉", name: "Color Studio", description: "Pick colors, create palettes and gradients.", accent: "green" },
   { icon: "⟲", name: "Vectorizer", description: "Convert raster images to SVG vectors.", accent: "green" },
   { icon: "⌗", name: "Scan Studio", description: "Scan documents with smart auto-crop.", accent: "green" },
-  { icon: "◫", name: "Metadata Cleaner", description: "Remove metadata from images and videos.", accent: "blue" },
 ];
 
 const whyData = [
@@ -29,7 +28,7 @@ const shotData = [
 ];
 
 const releaseData = {
-  version: "v1.2.4",
+  version: "v1.1.1",
   date: "Released 3 days ago",
   url: "https://github.com/7blackstar/RFINE/releases/latest/download/RFINE_Setup.exe",
   bullets: [
