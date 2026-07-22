@@ -26,9 +26,6 @@ const shotData = [
   { image: "./assets/screenshots/dashboard.webp", label: "Dashboard" },
   { image: "./assets/screenshots/image-resize.webp", label: "Image Resizer" },
   { image: "./assets/screenshots/video.webp", label: "Video Compressor" },
-  { image: "./assets/screenshots/frame-extractor.svg", label: "Frame Extractor" },
-  { image: "./assets/screenshots/scan-studio.svg", label: "Scan Studio" },
-  { image: "./assets/screenshots/color-studio.svg", label: "Color Studio" }
 ];
 
 const releaseData = {
