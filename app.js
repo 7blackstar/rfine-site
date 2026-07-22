@@ -83,7 +83,9 @@ function renderShots() {
 function renderRelease() {
   document.getElementById("release-version").textContent = releaseData.version;
   document.getElementById("release-date").textContent = releaseData.date;
-  document.getElementById("release-link").href = "./changelog.html";
+  document.getElementById("release-link").href = "https://github.com/7blackstar/RFINE/releases";
+  document.getElementById("release-link").target = "_blank";
+  document.getElementById("release-link").rel = "noreferrer";
   document.getElementById("download-button").href = releaseData.url;
   document.getElementById("hero-download").href = releaseData.url;
   document.getElementById("header-download").href = releaseData.url;
