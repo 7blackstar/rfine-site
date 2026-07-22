@@ -385,7 +385,6 @@ select {
 }
 
 .tool-card {
-  min-height: 136px;
   padding: 24px 24px 22px;
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
