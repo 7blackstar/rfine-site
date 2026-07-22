@@ -843,13 +843,20 @@ select {
 
 .community-footer{
     display:flex;
-    justify-content:center;
+    justify-content:flex-start;
     align-items:center;
-    gap:36px;
+    gap:28px;
     margin-top:24px;
-    padding-top:20px;
-    border-top:1px solid var(--border);
     flex-wrap:wrap;
+}
+
+.community-footer i{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background: linear-gradient(135deg, var(--primary-1), var(--primary-3));
+    display:inline-block;
+    flex-shrink:0;
 }
 
 .community-footer span{
