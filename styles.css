@@ -842,11 +842,14 @@ select {
 }
 
 .community-footer{
-    width:8px;
-    height:8px;
-    border-radius:50%;
-    background:var(--primary-2);
-    display:block;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:36px;
+    margin-top:24px;
+    padding-top:20px;
+    border-top:1px solid var(--border);
+    flex-wrap:wrap;
 }
 
 .community-footer span{
