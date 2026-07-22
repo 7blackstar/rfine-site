@@ -67,19 +67,6 @@ function renderWhy() {
   `).join("");
 }
 
-function renderShots() {
-  const strip = document.getElementById("shot-strip");
-
-  strip.innerHTML = shotData.map((shot) => `
-    <article class="shot-card">
-      <div class="shot-frame">
-        <img src="${shot.image}" alt="${shot.label} preview">
-      </div>
-      <p>${shot.label}</p>
-    </article>
-  `).join("");
-}
-
 function renderRelease() {
   document.getElementById("release-version").textContent = releaseData.version;
   document.getElementById("release-date").textContent = releaseData.date;
@@ -115,6 +102,5 @@ function startHeroShowcase() {
 
 renderTools();
 renderWhy();
-renderShots();
 renderRelease();
 startHeroShowcase();
