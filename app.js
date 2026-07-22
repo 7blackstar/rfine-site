@@ -42,8 +42,6 @@ const releaseData = {
 function renderTools() {
   const grid = document.getElementById("tool-grid");
 
-  if (!grid) return;
-
   grid.innerHTML = toolData.map((tool) => `
     <article class="tool-card" data-accent="${tool.accent}">
       <div class="tool-card-top">
@@ -60,8 +58,6 @@ function renderTools() {
 function renderWhy() {
   const grid = document.getElementById("why-grid");
 
-  if (!grid) return;
-
   grid.innerHTML = whyData.map((item) => `
     <article class="why-item">
       <div class="why-icon" aria-hidden="true">${item.icon}</div>
@@ -73,8 +69,6 @@ function renderWhy() {
 
 function renderShots() {
   const strip = document.getElementById("shot-strip");
-
-  if (!strip) return;
 
   strip.innerHTML = shotData.map((shot) => `
     <article class="shot-card">
@@ -88,7 +82,6 @@ function renderShots() {
 
 function renderRelease() {
   document.getElementById("release-version").textContent = releaseData.version;
-  if (!version) return;
   document.getElementById("release-date").textContent = releaseData.date;
   document.getElementById("release-link").href = "./changelog.html";
   document.getElementById("download-button").href = releaseData.url;
