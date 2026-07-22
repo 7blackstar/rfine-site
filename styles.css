@@ -189,6 +189,7 @@ select {
   border-radius: 999px;
   filter: blur(80px);
   pointer-events: none;
+  z-index: -1;
 }
 
 .hero-ambient-left {
