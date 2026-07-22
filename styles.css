@@ -151,9 +151,9 @@ select {
 
 .button-large small {
   margin-top: 4px;
-  font-size: 1rem;
-  font-weight: 600;
-  opacity: 0.9;
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.75;
 }
 
 .button-full {
@@ -288,7 +288,7 @@ select {
 .app-window {
   border-radius: 22px;
   overflow: hidden;
-  background:transparent;
+  background: #10130f;
   box-shadow:
   0 30px 80px rgba(70,90,62,.10),
   0 12px 30px rgba(70,90,62,.08);
