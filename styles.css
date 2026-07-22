@@ -343,7 +343,7 @@ select {
 .section-title p {
   margin: 12px 0 0;
   color: var(--text-soft);
-  font-size: 1.18rem;
+  font-size: 1rem;
 }
 
 .section-title.center {
@@ -676,17 +676,17 @@ select {
 .changelog-hero h1 {
   margin: 0;
   color: var(--primary-2);
-  font-size: clamp(4rem, 8vw, 6.4rem);
-  line-height: 0.95;
-  letter-spacing: -0.06em;
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.05em;
 }
 
 .changelog-hero p {
   margin: 22px auto 0;
   max-width: 900px;
   color: var(--text-soft);
-  font-size: 1.5rem;
-  line-height: 1.55;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 .changelog-section {
