@@ -853,7 +853,7 @@ select {
 
 .community-card p{
     margin:0;
-    font-size:0.9rem;
+    font-size:0.8rem;
     line-height:1.45;
     color:var(--text-soft);
 }
