@@ -609,9 +609,9 @@ select {
 
 .release-watermark {
   position: absolute;
-  right: 20px;
-  bottom: 54px;
-  width: 140px;
+  right: 24px;
+  bottom: 110px;
+  width: 150px;
   opacity: 0.1;
   pointer-events: none;
 }
