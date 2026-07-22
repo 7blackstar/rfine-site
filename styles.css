@@ -221,14 +221,14 @@ select {
 .hero-badge {
   display: inline-flex;
   align-items: center;
-  min-height: 40px;
+  min-height: 30px;
   padding: 0 16px;
   margin: 0 0 22px;
   border-radius: 999px;
   border: 1px solid rgba(77, 155, 34, 0.25);
   background: rgba(255, 255, 255, 0.56);
   color: var(--primary-1);
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
 }
 
@@ -247,7 +247,7 @@ select {
   max-width: 620px;
   margin: 26px 0 0;
   color: var(--text-soft);
-  font-size: 1.15rem;
+  font-size: 1rem;
   line-height: 1.7;
 }
 
