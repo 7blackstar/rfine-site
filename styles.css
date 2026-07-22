@@ -402,11 +402,12 @@ select {
 }
 
 .tool-icon {
-    width: 46px;
-    height: 46px;
-    flex: 0 0 46px;
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
     background: rgba(244, 246, 243, 0.98);
     display: flex;
+    font-size: 1.5rem;
     align-items: center;
     justify-content: center;
     border-radius: 14px;
@@ -476,7 +477,7 @@ select {
   display: grid;
   place-items: center;
   color: var(--primary-2);
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .why-item h3 {
