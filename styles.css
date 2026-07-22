@@ -209,7 +209,7 @@ select {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.80fr) minmax(0, 1.20fr);
+  grid-template-columns: minmax(0, 0.90fr) minmax(0, 1.10fr);
   gap: 34px;
   align-items: center;
 }
