@@ -844,7 +844,7 @@ select {
 .community-footer{
     display:flex;
     justify-content:center;
-    align-items:center;
+    align-items:left;
     gap:36px;
     margin-top:16px;
     padding-top:20px;
