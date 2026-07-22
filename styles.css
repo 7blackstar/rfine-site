@@ -821,3 +821,51 @@ select {
     flex-direction: column;
   }
 }
+
+.community-actions{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    margin-top:28px;
+}
+
+.community-card{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 24px;
+    border:1px solid var(--border);
+    border-radius:18px;
+    background:#fff;
+    transition:.2s;
+}
+
+.community-card:hover{
+    transform:translateY(-2px);
+    box-shadow:var(--shadow-sm);
+}
+
+.community-card h4{
+    margin:0 0 6px;
+    font-size:1.2rem;
+}
+
+.community-card p{
+    margin:0;
+    color:var(--text-soft);
+    line-height:1.5;
+}
+
+.community-card span{
+    font-size:26px;
+    color:var(--primary-2);
+}
+
+.community-points{
+    display:flex;
+    gap:24px;
+    margin-top:28px;
+    font-size:.95rem;
+    color:var(--text-soft);
+    flex-wrap:wrap;
+}
