@@ -38,36 +38,6 @@ const releaseData = {
   ]
 };
 
-const changelogData = [
-  {
-    version: "Version 1.2.0",
-    sections: [
-      {
-        title: "New Pages Added:",
-        items: [
-          "Website foundation improved with a more polished RFINE landing page and cleaner section structure."
-        ]
-      },
-      {
-        title: "Improvements:",
-        items: [
-          "Homepage updated with cleaner cards, stronger brand alignment, and a lighter approved visual direction."
-        ]
-      }
-    ]
-  },
-  {
-    version: "Version 1.1.1",
-    sections: [
-      {
-        title: "Improvements:",
-        items: [
-          "Refined the website structure, download flow, and branding assets for public release."
-        ]
-      }
-    ]
-  }
-];
 
 function renderTools() {
   const grid = document.getElementById("tool-grid");
@@ -147,35 +117,9 @@ function startHeroShowcase() {
   }, 3000);
 }
 
-function renderChangelogPage() {
-  const changelogStack = document.getElementById("changelog-stack");
-
-  if (!changelogStack) {
-    return;
-  }
-
-  changelogStack.innerHTML = changelogData.map((entry) => `
-    <article class="changelog-entry">
-      <div class="changelog-entry-title">
-        <h2>${entry.version}</h2>
-      </div>
-      <div class="changelog-entry-body">
-        ${entry.sections.map((section) => `
-          <section>
-            <h3>${section.title}</h3>
-            <ul>
-              ${section.items.map((item) => `<li>${item}</li>`).join("")}
-            </ul>
-          </section>
-        `).join("")}
-      </div>
-    </article>
-  `).join("");
-}
 
 renderTools();
 renderWhy();
 renderShots();
 renderRelease();
 startHeroShowcase();
-renderChangelogPage();
