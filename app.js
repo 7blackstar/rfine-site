@@ -1,16 +1,16 @@
 const toolData = [
-  { icon: "▣", name: "Image Resizer", description: "Resize images in bulk with ease.", accent: "green" },
-  { icon: "◔", name: "Watermarker", description: "Add text or image watermarks.", accent: "amber" },
+  { icon: "▣", name: "Image Resizer", description: "Resize, convert and batch process images offline.", accent: "green" },
+  { icon: "▸", name: "Video Compressor", description: "Reduce video size while preserving visual quality.", accent: "green" },
+  { icon: "▤", name: "Frame Extractor", description: "Extract high-quality still frames from any video.", accent: "green" },
+  { icon: "Q", name: "File Renamer", description: "Rename multiple files using smart batch rules.", accent: "green" },
+  { icon: "◔", name: "Watermarker", description: "Apply custom text or logo watermarks to images.", accent: "green" },
+  { icon: "♫", name: "Audio Converter", description: "Convert audio between popular formats offline.", accent: "green" },
+  { icon: "⌘", name: "GIF Creator", description: "Generate optimized animated GIFs from videos.", accent: "green" },
+  { icon: "T", name: "Case Converter", description: "Convert text between uppercase, lowercase and more.", accent: "green" },
   { icon: "◉", name: "Color Studio", description: "Pick colors, create palettes and gradients.", accent: "rainbow" },
   { icon: "⟲", name: "Vectorizer", description: "Convert raster images to SVG vectors.", accent: "green" },
-  { icon: "▸", name: "Video Compressor", description: "Compress videos without losing quality.", accent: "red" },
-  { icon: "▤", name: "Frame Extractor", description: "Extract high quality frames from videos.", accent: "blue" },
-  { icon: "⌘", name: "GIF Creator", description: "Create GIFs from videos or images.", accent: "purple" },
   { icon: "⌗", name: "Scan Studio", description: "Scan documents with smart auto-crop.", accent: "green" },
-  { icon: "T", name: "Text Case", description: "Convert text to uppercase, lowercase and more.", accent: "lime" },
-  { icon: "♫", name: "Audio Converter", description: "Convert audio between multiple formats.", accent: "red" },
   { icon: "◫", name: "Metadata Cleaner", description: "Remove metadata from images and videos.", accent: "blue" },
-  { icon: "Q", name: "Batch Renamer", description: "Rename multiple files with advanced rules.", accent: "lime" }
 ];
 
 const whyData = [
