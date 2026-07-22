@@ -842,16 +842,11 @@ select {
 }
 
 .community-footer{
-    display:flex;
-    justify-content:center;
-    align-items:left;
-    gap:36px;
-    margin-top:16px;
-    padding-top:20px;
-    font-size:.92rem;
-    font-weight:500;
-    color:var(--text-soft);
-    flex-wrap:wrap;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:var(--primary-2);
+    display:block;
 }
 
 .community-footer span{
