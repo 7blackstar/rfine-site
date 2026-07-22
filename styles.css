@@ -402,15 +402,15 @@ select {
 }
 
 .tool-icon {
-  width: 40px;
-  height: 40px;
-  display: grid;
-  place-items: center;
-  border-radius: 12px;
-  background: rgba(244, 246, 243, 0.98);
-  border: 1px solid rgba(229, 234, 228, 0.9);
-  font-size: 1.2rem;
-  font-weight: 700;
+    width: 46px;
+    height: 46px;
+    flex: 0 0 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
 }
 
 .tool-card h3 {
