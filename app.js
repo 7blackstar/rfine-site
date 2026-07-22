@@ -23,7 +23,7 @@ const whyData = [
 ];
 
 const shotData = [
-  { image: "./assets/screenshots/dashboard.svg", label: "Dashboard" },
+  { image: "./assets/screenshots/dashboard.webp", label: "Dashboard" },
   { image: "./assets/screenshots/image-resizer.svg", label: "Image Resizer" },
   { image: "./assets/screenshots/video-compressor.svg", label: "Video Compressor" },
   { image: "./assets/screenshots/frame-extractor.svg", label: "Frame Extractor" },
