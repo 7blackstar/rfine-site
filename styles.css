@@ -848,6 +848,7 @@ select {
     gap:28px;
     margin-top:24px;
     flex-wrap:wrap;
+    font-size: 0.90rem;
 }
 
 .community-footer i{
