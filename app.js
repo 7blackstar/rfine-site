@@ -28,13 +28,13 @@ const shotData = [
 ];
 
 const releaseData = {
-  version: "v1.1.1",
-  date: "Released 3 days ago",
+  version: "v1.1.0",
+  date: "Released Jul 22, 2026",
   url: "https://github.com/7blackstar/RFINE/releases/latest/download/RFINE_Setup.exe",
   bullets: [
-    "Windows 10/11 (64-bit)",
-    "Size: 38.7 MB",
-    "No installation required"
+    "✓ Windows 10 & 11",
+    "✓ Completely Free",
+    "✓ Offline Processing"
   ]
 };
 
