@@ -906,7 +906,7 @@ select {
 }
 
 .doc-hero h1{
-    font-size:64px;
+    font-size:48px;
     line-height:1;
     margin-bottom:18px;
 }
@@ -915,12 +915,12 @@ select {
     max-width:760px;
     margin:0 auto;
     color:var(--text-light);
-    font-size:20px;
+    font-size:16px;
 }
 
 .doc-updated{
     margin-top:18px;
-    font-size:15px;
+    font-size:14px;
     color:#7b8578;
 }
 
@@ -939,12 +939,12 @@ select {
     margin-bottom:0;
 }
 .doc-card h2{
-    font-size:34px;
+    font-size:26px;
     margin-bottom:18px;
 }
 
 .doc-card p{
-    font-size:18px;
+    font-size:16px;
     line-height:1.8;
     color:var(--text-light);
     max-width:850px;
@@ -956,6 +956,6 @@ select {
 
 .doc-card li{
     margin-bottom:10px;
-    font-size:18px;
+    font-size:16px;
     color:var(--text-light);
 }
