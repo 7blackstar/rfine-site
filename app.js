@@ -37,7 +37,7 @@ const releaseData = {
   version: "v1.1.0",
   date: "Released Jul 22, 2026",
   url: "https://github.com/7blackstar/RFINE/releases/latest/download/RFINE_Setup.exe",
-  ]
+  bullets: []
 };
 
 
