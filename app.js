@@ -23,8 +23,14 @@ const whyData = [
 
 const shotData = [
   { image: "./assets/screenshots/dashboard.webp", label: "Dashboard" },
-  { image: "./assets/screenshots/image-resize.webp", label: "Image Resizer" },
-  { image: "./assets/screenshots/video.webp", label: "Video Compressor" },
+  { image: "./assets/screenshots/image-resizer.webp", label: "Image Resizer" },
+  { image: "./assets/screenshots/video-compressor.webp", label: "Video Compressor" },
+  { image: "./assets/screenshots/frame-extractor.webp", label: "Frame Extractor" },
+  { image: "./assets/screenshots/file-renamer.webp", label: "File Renamer" },
+  { image: "./assets/screenshots/watermarker.webp", label: "Watermarker" },
+  { image: "./assets/screenshots/audio-converter.webp", label: "Audio Converter" },
+  { image: "./assets/screenshots/gif-creator.webp", label: "GIF Creator" },
+  { image: "./assets/screenshots/case-converter.webp", label: "Case Converter" },
 ];
 
 const releaseData = {
